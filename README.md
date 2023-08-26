@@ -1,4 +1,4 @@
-My main in this project is help to anime lovers to find anime for watching because sometimes finding anime can be difficult.
+My main aim in this project is help to anime lovers to find anime for watching because sometimes finding anime can be difficult.
 to use my project, make sure that you dowloaded all files and type terminal npm i. Then nodemon index.js, enjoy.
 
 Initial screen
