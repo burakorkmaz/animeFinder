@@ -1,0 +1,57 @@
+<%- include("./partials/header.ejs") %>
+    <main>
+        <div>
+            <h1 id = "entryParagraph">Are you looking for a new Anime</h1>
+            <h1 id = "description">The Right adress for finding anime</h1>
+        </div>
+
+        <form method = "post" action = "/submit">
+            <div class = "centered">
+                <button  type = "submit"><h1> RANDOM ANIME</h1></button>
+            </div>
+        </form>
+
+        <% if (locals.data) { %>
+            <div class = "container" >
+                <div class = "item">
+                    <img src = <%= data.images.jpg["large_image_url"]%> class = "pic">
+                </div>
+                <div class = "item">
+                    <div class = "title">
+                        <div class = "titleHeading">
+                            <h1><%= nameD %></h1>
+                        </div>
+                        <div class = "star">
+                            <img src = "./images/star.svg" >
+                            <p><%= data.score %></p>
+                        </div>
+                    </div>
+
+                    <div class = "content">
+                        <div class = "rankContents">
+                            <h1>RANKED:#<%= data.rank%></h1>
+                            <h1>POPULARITY:#<%= data.popularity%></h1>
+                            <h1>EPISODES:#<%= data.episodes %></h1>
+                        </div>
+
+                        <h2>
+                            SYNOPSIS
+                        </h2>
+
+                        <hr/>
+                        
+                        <h3>
+                            <%= data.synopsis %>
+                        </h3>
+
+                    </div>
+
+                </div>
+            </div>
+
+        <% } %>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>
